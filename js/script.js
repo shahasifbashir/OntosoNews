@@ -1,6 +1,8 @@
+//This function is used to create the carousel
 function getFigures() {
     return document.getElementById('carousel').getElementsByTagName('figure');
 }
+//This function makes the carousel to move forward
 function moveForward() {
     var pointer;
     var figures = getFigures();
@@ -16,6 +18,7 @@ function moveForward() {
     figures[pointer].className = 'visible';
     setTimeout(moveForward, slideInterval);
 }
+//This function runs the carosel
 function startPlayback() {    
     setTimeout(moveForward, slideInterval);
 }
